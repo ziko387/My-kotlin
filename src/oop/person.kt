@@ -1,32 +1,33 @@
 package oop
 
 import java.sql.Date
+import java.time.Year
 
-class person {
+class Person {
     //properties
     var name:String= ""
     var age:Int=0
     // METHODS
     fun speak(){
-        println("hello, my name is$name, iam $age ")
+        println("hello, my name is$name, iam $age years old")
     }
 }
-class vehicle(val model:String , val make :String, val yom:Int){
+class Vehicle(val model:String , val make :String, val yom: Int){
     fun identifycar(){
-        println("this car is $make $model and was manufactured " + "$yom")
+        println("this car is $make $model and was manufactured in $yom")
     }
 }
 
 // create an object from above class
-fun main() {
-    var person1 = person()
-    val person2 = person()
+fun main (){
+    val person1 = Person()
+    val person2 = Person()
     person1.name = "Musa"
     person1.age=24
     person1.speak()
 
-    val vehicle1=vehicle("corrola","Toyota","2002")
-    val vehicle2=vehicle("x","Toyota","2005")
+    val vehicle1=Vehicle("corrola","Toyota","2002")
+    val vehicle2=Vehicle("x","Toyota","2005")
 
     vehicle1.identifycar()
     vehicle2.identifycar()
