@@ -26,8 +26,8 @@ fun main (){
     person1.age=24
     person1.speak()
 
-    val vehicle1=Vehicle("corrola","Toyota","2002")
-    val vehicle2=Vehicle("x","Toyota","2005")
+    val vehicle1=Vehicle("corrolla","Toyota",2005)
+    val vehicle2=Vehicle("x","Toyota",2005)
 
     vehicle1.identifycar()
     vehicle2.identifycar()
