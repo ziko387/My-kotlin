@@ -1,4 +1,4 @@
- // a loop allows repeat task a number of set times or over a collection of data
+// a loop allows repeat task a number of set times or over a collection of data
  //in kotlin for loops (used when we have no of iterations)
  // while in loop(continues as long as the condition is true)
  // and foreach loop(used to loop over collection e.g. arrays)
@@ -20,7 +20,7 @@ fun main(){
      val fruits= listOf("mangoes","bananas","apples")
      for (i in  fruits){
          converttoUpper(i)
-         println()
+         println(i)
      }
      // print with index positioning
      for ((index,fruits) in fruits.withIndex()){
@@ -41,7 +41,41 @@ fun main(){
          j++
 
      }while (j <= 5)
+   //nested loop : a loop inside a loop
+   // for every iteration of the outer loop ,the inner loop must complete  its set of iterations
+    for (i in 1..3){ //outer loop
+        println("$i : outer loop")
+        for (j in 1..3){ // inner loop
+            println("$j: inner loop")
+        }
+
+    }
+    // loop CONTROL STATEMENT: break , continue
+    //labels(outer and inner)
+    // break : it terminates the loop when a condition is meet
+    for (i in 1..10) {
+        if (i == 5) {
+            break
+        }
+        println(i)
+    }
+    for (i in 1..10){
+        if (i == 5){
+            continue
+        }
+        println(i)
+    }
+   // label statement outer and inner (@)
+    outer@ for (i in 1..3){
+        inner@ for (j in 1..3){
+            if (i ==2 && j ==2){
+                break@outer
+            }
+            println("i=$i , j=$j")
+        }
+    }
 }
- fun converttoUpper(i:string ){
+ fun converttoUpper(i: String){
      println(i.uppercase())
  }
+
